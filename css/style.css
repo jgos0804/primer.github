@@ -1,0 +1,134 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Menu en ccs */
+/* estilo de menu */
+
+body{
+    background-color:white;
+    
+}
+    
+
+
+/* estilo del Menu */
+
+.contenedor{
+  display: grid;
+  grid-template-areas: "logotipo logotipo logotipo logotipo"
+                       " botones botones botones botones "
+                       " contenido contenido contenido "
+                       " iframe iframe iframe iframe " ;           
+}
+
+.contenido{
+    grid-area: contenido;
+}
+.botones{
+    grid-area: botenes;
+   display: flex;
+   justify-content: center;
+}
+
+.opcion ul li{
+    background-color: black;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 10%;
+    
+}
+
+nav ul li:hover{
+    background-color:gray;
+    transform: scale(0.9);
+    box-shadow: 1px 1px 1px black;
+}
+    
+/* Estilo de Contenido principal*/
+
+.texto{
+    text-align: center;
+    background-image: linear-gradient(to bottom, gray, white);
+    margin-top:200px ;
+}
+    
+.texto h1{
+    color: black;
+    text-shadow: 1px 1px 10px black;
+    text-decoration: underline;
+    background-color: white;
+    padding: 20px;
+    
+}
+
+.texto h1, p{
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    
+    
+}
+
+/* Estilo de footer*/
+
+.etiqueta__h2{
+    color:black;
+    text-align: center;
+    font-weight: bolder;
+    background-image: linear-gradient(to top, gray, white);
+}
+
+footer{
+   margin-top: 90px;  
+}
+
+/* item de pagina de instagram*/
+
+.logoinsta{
+    position:fixed;
+    bottom:0;
+    right:0;   
+}
+
+.logo img{
+    width:10%;
+}
+logotipo{
+    grid-area: logotipo ;
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    grid-area: iframe;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+/*medidas aplicadas para vista en escritorio*/
+
+@media screen and (min-width:481px){
+    .opcion ul li{
+        
+        padding: 20px;
+        
+    }
+    iframe{
+        display: flex;
+        justify-content: end;
+       
+    }
+   
+   
+    
+}
